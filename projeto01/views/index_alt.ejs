@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Perguntas</title>
+    <link rel="stylesheet" href="/css2/style.css">
+
+</head>
+<body>
+
+    <header>
+        <img src="/img/guia.png"></img>
+    </header>
+
+    <h1>Guia de Perguntas</h1>
+    <hr>
+    <h3>Lista de Perguntas</h3>
+
+    <p>Nome: <%= nome %></p>
+    <p>Linguagem Preferida: <%= lang %></p>
+    <p>Empresa: <%= empresa %></p>
+    <p>Número de inscritos: <%= inscritos %></p>
+
+
+    <% if(msg == false){ %>
+        <h3>Isso é uma mesagem de erro</h3>
+
+    <%}else {%>
+        <h3>Nenhum Erro</h3>
+    <%}%>
+
+    <% produtos.forEach( function(produto){ %>
+        <hr>
+        <h3><%= produto.nome  %></h3>
+        <h4><%= produto.preco %></h4>
+    <%})%>
+
+   
+
+
+</body>
+</html>
